@@ -17,7 +17,7 @@ title: Test
 
 <body class="d-flex h-100">
     <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="pb-3 mb-4 border-bottom">
+        <!-- <header class="pb-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
                 <svg width="32" height="32" class="me-2" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_20_22)">
@@ -37,7 +37,50 @@ title: Test
 
                 <span class="fs-4">{{site.title}}</span>
             </a>
-        </header>
+        </header> -->
+
+
+        <nav class="navbar navbar-expand-lg pb-2 mb-4 border-bottom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <svg width="32" height="32" class="me-2 d-inline-block align-text-top" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_20_22)">
+                            <path d="M501 0H1V500H501V0Z" fill="white" />
+                            <path d="M470 50H27V150H470V50Z" fill="#3498DB" />
+                            <path d="M299 200H27V300H299V200Z" fill="#E74C3C" />
+                            <path d="M427 350H27V450H427V350Z" fill="#2ECC71" />
+                            <line x1="27.5" y1="25" x2="27.5" y2="475" stroke="black" stroke-width="3" />
+                            <line x1="470" y1="476.5" x2="26" y2="476.5" stroke="black" stroke-width="3" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_20_22">
+                                <rect width="500" height="500" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    {{site.title}}</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/events">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
 
         <main class="px-3">
             {{content}}

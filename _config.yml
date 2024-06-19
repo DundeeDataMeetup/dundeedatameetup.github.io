@@ -50,3 +50,15 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Collections
+collections:
+  events:
+    output: true
+    permalink: /events/:path/
+  organisers:
+    output: true
+    permalink: /organisers/:path/
+  speakers:
+    output: true
+    permalink: /speakers/:path/
