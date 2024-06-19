@@ -17,29 +17,6 @@ title: Test
 
 <body class="d-flex h-100">
     <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <!-- <header class="pb-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
-                <svg width="32" height="32" class="me-2" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_20_22)">
-                        <path d="M501 0H1V500H501V0Z" fill="white" />
-                        <path d="M470 50H27V150H470V50Z" fill="#3498DB" />
-                        <path d="M299 200H27V300H299V200Z" fill="#E74C3C" />
-                        <path d="M427 350H27V450H427V350Z" fill="#2ECC71" />
-                        <line x1="27.5" y1="25" x2="27.5" y2="475" stroke="black" stroke-width="3" />
-                        <line x1="470" y1="476.5" x2="26" y2="476.5" stroke="black" stroke-width="3" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_20_22">
-                            <rect width="500" height="500" fill="white" />
-                        </clipPath>
-                    </defs>
-                </svg>
-
-                <span class="fs-4">{{site.title}}</span>
-            </a>
-        </header> -->
-
-
         <nav class="navbar navbar-expand-lg pb-2 mb-4 border-bottom">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -86,8 +63,10 @@ title: Test
             {{content}}
         </main>
 
-        <footer class="pt-3 mt-auto text-body-secondary border-top">
-            &copy; 2024 {{site.title}}
+        <footer class="py-3 mt-auto text-body-secondary border-top">
+            <div class="container">
+                &copy; 2024 {{site.title}}
+            </div>
         </footer>
     </div>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
