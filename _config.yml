@@ -56,9 +56,12 @@ collections:
   events:
     output: true
     permalink: /events/:path/
+    sort_by: title
   organisers:
     output: true
     permalink: /organisers/:path/
+    sort_by: title
   speakers:
     output: true
     permalink: /speakers/:path/
+    sort_by: title
