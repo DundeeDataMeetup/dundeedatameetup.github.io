@@ -2,8 +2,29 @@
 title: About
 ---
 
+<style>
+    .headshot-wrapper {
+        width: 7rem;
+        height: 7rem;
+    }
+</style>
+
 <h1>{{page.title}}</h1>
 
-{% for organiser in site.organisers %}
-<li>{{organiser.name}}</li>
-{%endfor%}
+<h2>What is the Dundee Data meetup?</h2>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id dolor a nulla finibus malesuada a ac nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit sit amet lectus id mattis. Curabitur ornare sem cursus mi consectetur hendrerit. Fusce at eros efficitur, ultricies enim eu, sagittis odio. Donec convallis nisi at mauris malesuada convallis. Proin finibus ex at ex viverra tempus.
+
+<h2>Organisers</h2>
+
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    {%for organiser in site.organisers%}
+        <div class="col">
+            <div class="headshot-wrapper d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 p-2 rounded">
+                <i class="bi bi-person-circle"></i>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">{{organiser.name}}</h3>
+            <p class="lead">{{organiser.tagline}}</p>
+        </div>
+        {%endfor%}
+    </div>

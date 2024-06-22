@@ -1,5 +1,5 @@
 ---
-title: Test
+
 ---
 
 <!doctype html>
@@ -10,7 +10,8 @@ title: Test
 <meta name="description" content="TODO">
 <title>{{page.title}} | {{site.title}}</title>
 
-<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap-icons.min.css" rel="stylesheet">
 <script src="https://js.tito.io/v2" async></script>
 
 </head>
@@ -50,9 +51,11 @@ title: Test
                         <li class="nav-item">
                             <a class="nav-link" href="/events">Events</a>
                         </li>
+                        {%comment%}
                         <li class="nav-item">
                             <a class="nav-link" href="/blog">Blog</a>
                         </li>
+                        {%endcomment%}
                     </ul>
                 </div>
             </div>
@@ -69,7 +72,7 @@ title: Test
             </div>
         </footer>
     </div>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
