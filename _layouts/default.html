@@ -11,6 +11,8 @@
 <meta name="description" content="{% if page.description == "" or page.description == nil or page.description == blank %}{{site.description}}{% else %}{{page.description}}{% endif %}">
 <title>{{page.title}} | {{site.title}}</title>
 
+<link rel="icon" type="image/png" href="favicon.png" />
+
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="/assets/css/bootstrap-icons.min.css" rel="stylesheet">
 <link href="{{ "assets/css/site.css" | relative_url | append: cacheBust }}" rel="stylesheet">
