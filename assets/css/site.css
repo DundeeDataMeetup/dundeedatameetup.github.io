@@ -1,5 +1,6 @@
 .sponsor-logo {
-    height: 10rem;
+    width: 10rem;
+    height: auto;
 }
 
 .headshot-wrapper {
