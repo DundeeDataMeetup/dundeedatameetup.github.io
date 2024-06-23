@@ -2,11 +2,11 @@
 title: Home
 ---
 
-<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+<div class="p-3 mb-4 bg-body-tertiary rounded-3">
     <div class="container-fluid py-5">
         <div class="row">
             <div class="col-md-6 col-12">
-                <img class="img-fluid" src="assets/img/ddm_logo.png" alt="Dundee Data Meetup logo">
+                <img class="img-fluid" src="assets/img/ddm_logo.png" alt="Dundee Data Meetup logo" />
             </div>
             <div class="col-md-6 col-12">
                 <h1 class="display-5 fw-bold">Welcome to the Dundee Data Meetup</h1>
@@ -19,26 +19,46 @@ title: Home
     </div>
 </div>
 
-<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+<div class="p-3 mb-4 bg-body-tertiary rounded-3">
     <div class="container-fluid py-5">
-        <p>We're dedicated to fostering an inclusive community where individuals from diverse backgrounds can come together to share knowledge, spark ideas, ignite curiosity, foster collaboration, and promote responsible data practices. Each month, we'll be featuring different themes, so check out our updates on our socials and this page. </p>
+        <p>We're dedicated to fostering an inclusive community where individuals from diverse backgrounds can come together to share knowledge, spark ideas, ignite curiosity, foster collaboration, and promote responsible data practices. Each month, we'll be featuring different themes, so check out our updates on our socials and this website.</p>
     </div>
 </div>
 
 <div class="row mb-4">
     <div class="col-md-6 col-12">
-        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-            <div class="container-fluid py-5">
+        <div class="p-3 mb-4 bg-body-tertiary rounded-3">
+            <div class="container-fluid py-3">
                 <h2>Events</h2>
-                <p>Some intro text to encourage people to view our event listing.</p>
+                <p>Check out a list of our past and future events</p>
+                <a href="/events" class="btn btn-secondary">See more</a>
             </div>
         </div>
     </div>
     <div class="col-md-6 col-12">
-        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-            <div class="container-fluid py-5">
+        <div class="p-3 mb-4 bg-body-tertiary rounded-3">
+            <div class="container-fluid py-3">
                 <h2>Speakers</h2>
-                <p>Some intro text to encourage people to look at some of our past speakers.</p>
+                <p>See who's presented previously at our meetups</p>
+                <a href="/speakers" class="btn btn-secondary">See more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="p-3 mb-4 bg-body-tertiary rounded-3">
+            <div class="container-fluid py-3">
+                <h2 class="mb-3">Sponsors</h2>
+                <div class="row row-cols-2 row-cols-lg-4">
+                    {% assign sponsors = site.sponsors | sort_natural: "title" %} {% for sponsor in sponsors %}
+                    <div class="col text-center">
+                        <img class="img-fluid rounded border border-3 sponsor-logo" alt="{{sponsor.title}} logo" src="{{sponsor.logo_path}}" />
+                        <h3>{{sponsor.title}}</h3>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

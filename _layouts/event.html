@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<h1>{{page.title}}<br /><small class="text-body-secondary fs-3">{{page.date | date: "%-d %B %Y"}}</small></h1>
+
+{%if page.attendance %}
+<p>{{page.attendance}} attendees</p>
+{%endif%}

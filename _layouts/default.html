@@ -1,6 +1,7 @@
 ---
 
 ---
+{% assign cacheBust = site.time | date:'?v=%s' %}
 
 <!doctype html>
 <html lang="en" class="h-100">
@@ -12,6 +13,7 @@
 
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="/assets/css/bootstrap-icons.min.css" rel="stylesheet">
+<link href="{{ "assets/css/site.css" | relative_url | append: cacheBust }}" rel="stylesheet">
 <script src="https://js.tito.io/v2" async></script>
 
 </head>

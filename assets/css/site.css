@@ -1,0 +1,14 @@
+.sponsor-logo {
+    height: 10rem;
+}
+
+.headshot-wrapper {
+    width: 7rem;
+    height: 7rem;
+}
+
+.event-img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+}

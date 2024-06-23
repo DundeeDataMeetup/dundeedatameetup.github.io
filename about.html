@@ -3,13 +3,6 @@ title: About
 description: About the Dundee Data Meetup
 ---
 
-<style>
-    .headshot-wrapper {
-        width: 7rem;
-        height: 7rem;
-    }
-</style>
-
 <h1>{{page.title}}</h1>
 
 <h2>What is the Dundee Data meetup?</h2>
@@ -20,7 +13,7 @@ description: About the Dundee Data Meetup
 
 <h2>Organisers</h2>
 
-<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+<div class="row g-4 py-2 row-cols-1 row-cols-lg-3">
     {%for organiser in site.organisers%}
     <div class="col">
         <div class="headshot-wrapper d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 p-2 rounded">
@@ -30,4 +23,15 @@ description: About the Dundee Data Meetup
         <p class="lead">{{organiser.tagline}}</p>
     </div>
     {%endfor%}
+</div>
+
+<h2>Sponsors</h2>
+
+<div class="row row-cols-2 row-cols-lg-4 py-2">
+    {% assign sponsors = site.sponsors | sort_natural: "title" %} {% for sponsor in sponsors %}
+    <div class="col text-center">
+        <img class="img-fluid rounded border border-3 sponsor-logo" alt="{{sponsor.title}} logo" src="{{sponsor.logo_path}}" />
+        <h3>{{sponsor.title}}</h3>
+    </div>
+    {% endfor %}
 </div>
