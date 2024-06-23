@@ -1,5 +1,6 @@
 ---
 title: About
+description: About the Dundee Data Meetup
 ---
 
 <style>
@@ -13,18 +14,20 @@ title: About
 
 <h2>What is the Dundee Data meetup?</h2>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id dolor a nulla finibus malesuada a ac nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit sit amet lectus id mattis. Curabitur ornare sem cursus mi consectetur hendrerit. Fusce at eros efficitur, ultricies enim eu, sagittis odio. Donec convallis nisi at mauris malesuada convallis. Proin finibus ex at ex viverra tempus.
+<p>The Dundee Data Meetup is a vibrant community-driven event that brings together curious learners, data enthusiasts and professionals to explore the captivating world of data and its applications. We're dedicated to fostering an inclusive community where individuals from diverse backgrounds can come together to share knowledge, spark ideas, ignite curiosity, foster collaboration, and promote responsible data practices.</p>
+
+<p>The Meetup was set up because there has been a lack of similar event in the Dundee and Tayside area. We run this meetup as a community-driven meeting on the last Tuesday of the month, and allow everyone from diverse backgrounds to come together with a shared interest in data. Whether you are just a curious learner or a data professional, you are welcome to come along and share knowledge, showcase success, spark ideas, foster collaboration, drives innovation and promote responsible data practices.</p>
 
 <h2>Organisers</h2>
 
 <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
     {%for organiser in site.organisers%}
-        <div class="col">
-            <div class="headshot-wrapper d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 p-2 rounded">
-                <i class="bi bi-person-circle"></i>
-            </div>
-            <h3 class="fs-2 text-body-emphasis">{{organiser.name}}</h3>
-            <p class="lead">{{organiser.tagline}}</p>
+    <div class="col">
+        <div class="headshot-wrapper d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 p-2 rounded">
+            <i class="bi bi-person-circle"></i>
         </div>
-        {%endfor%}
+        <h3 class="fs-2 text-body-emphasis">{{organiser.name}}</h3>
+        <p class="lead">{{organiser.tagline}}</p>
     </div>
+    {%endfor%}
+</div>
