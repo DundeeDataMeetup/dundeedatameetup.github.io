@@ -1,4 +1,4 @@
 ---
 name: Lingsay Wong
-tagline: Data Understood
+tagline: Covalence Future
 ---
