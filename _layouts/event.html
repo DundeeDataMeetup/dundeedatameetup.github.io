@@ -9,5 +9,30 @@ layout: default
 {%endif%}
 
 {%if page.description %}
+<h2>Description</h2>
 <p>{{page.description}}</p>
+{%endif%}
+
+{%if page.topics %}
+<h2>Speakers and topics</h2>
+{%for topic in page.topics %}
+    {% assign speaker = site.speakers | where:"slug", topic.speaker | first %}
+    <h3>{{topic.title}}</h3>
+    <p><strong>{{speaker.name}}</strong>, {{speaker.tagline}}</p>
+    <p>{{topic.description}}</p>
+{%endfor%}
+<h2>Speaker bios</h3>
+{%for topic in page.topics %}
+    {% assign speaker = site.speakers | where:"slug", topic.speaker | first %}
+    <p>{{speaker.bio | markdownify}}</p>
+{%endfor%}
+{%endif%}
+
+{%if page.slides %}
+<h2>Slides</h2>
+<ul>
+{%for slide in page.slides %}
+    <li><a href="{{slide.url | prepend: site.url}}" download target="_blank">{{slide.title}}</a></li>
+{%endfor%}
+</ul>
 {%endif%}
