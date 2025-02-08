@@ -24,6 +24,7 @@ layout: default
 <h2>Speaker bios</h3>
 {%for topic in page.topics %}
     {% assign speaker = site.speakers | where:"slug", topic.speaker | first %}
+    <h3>{{speaker.name}}</h3>
     <p>{{speaker.bio | markdownify}}</p>
 {%endfor%}
 {%endif%}
