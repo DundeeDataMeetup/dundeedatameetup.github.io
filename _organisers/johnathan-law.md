@@ -1,4 +1,4 @@
 ---
 name: Johnathan Law
-tagline: Matillion
+tagline: Conduktor
 ---
