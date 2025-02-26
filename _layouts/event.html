@@ -19,7 +19,7 @@ layout: default
     {% assign speaker = site.speakers | where:"slug", topic.speaker | first %}
     <h3>{{topic.title}}</h3>
     <p><strong>{{speaker.name}}</strong>, {{speaker.tagline}}</p>
-    <p>{{topic.description}}</p>
+    <p>{{topic.description | markdownify}}</p>
 {%endfor%}
 <h2>Speaker bios</h3>
 {%for topic in page.topics %}
