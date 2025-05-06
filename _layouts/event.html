@@ -15,6 +15,7 @@ layout: default
 
 {%if page.topics %}
 <h2>Speakers and topics</h2>
+{% assign speakers = '' | split: '' %}
 {%for topic in page.topics %}
     <h3>{{topic.title}}</h3>
     {% if topic.speaker %}
@@ -23,33 +24,26 @@ layout: default
         {% if topic.speaker.first %}
             {% for speaker_slug in topic.speaker %}
                 {% assign speaker = site.speakers | where:"slug", speaker_slug | first %}
+                {% assign speakers = speakers | push: speaker %}
                 <p><strong>{{speaker.name}}</strong>, {{speaker.tagline}}</p>
             {% endfor %}
         {%- comment -%} If there is a single speaker then don't loop {%- endcomment -%}
         {% else %}
             {% assign speaker = site.speakers | where:"slug", topic.speaker | first %}
+            {% assign speakers = speakers | push: speaker %}
             <p><strong>{{speaker.name}}</strong>, {{speaker.tagline}}</p>
         {% endif %}
     {% endif %}
     <p>{{topic.description | markdownify}}</p>
 {%endfor%}
-<h2>Speaker bios</h3>
-{%for topic in page.topics %}
-    {%- comment -%} TODO: This can probably be refined to assume an array is always in use {%- endcomment -%}
-    {%- comment -%} TODO: Handle duplication cases where the same speaker may appear in multiple topics. Only render bio once. {%- endcomment -%}
-    {%- comment -%} If there is more than one speaker then loop {%- endcomment -%}
-    {% if topic.speaker.first %}
-        {% for speaker_slug in topic.speaker %}
-            {% assign speaker = site.speakers | where:"slug", speaker_slug | first %}
-            <h3>{{speaker.name}}</h3>
-            <p>{{speaker.bio | markdownify}}</p>
-        {% endfor %}
-    {%- comment -%} If there is a single speaker then don't loop {%- endcomment -%}
-    {% else %}
-        {% assign speaker = site.speakers | where:"slug", topic.speaker | first %}
+{%endif%}
+
+<h2>Speaker bios</h2>
+{% assign speakers = speakers | uniq %}
+{%if speakers %}
+{%for speaker in speakers %}
         <h3>{{speaker.name}}</h3>
         <p>{{speaker.bio | markdownify}}</p>
-    {% endif %}    
 {%endfor%}
 {%endif%}
 
