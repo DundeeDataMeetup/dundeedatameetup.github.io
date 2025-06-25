@@ -39,7 +39,7 @@ layout: default
 {%endif%}
 
 {% assign speakers = speakers | uniq %}
-{%if speakers %}
+{% if speakers.size > 0 %}
 <h2>Speaker bios</h2>
 {%for speaker in speakers %}
         <h3>{{speaker.name}}</h3>
