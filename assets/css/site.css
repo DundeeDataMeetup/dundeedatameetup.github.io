@@ -14,8 +14,28 @@
     object-fit: cover;
 }
 
+#eventPhotosCarousel {
+    /* Optional: set a max width for desktop, full width for mobile */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#eventPhotosCarousel .carousel-item {
+    /* Maintain aspect ratio (e.g., 16:9) */
+    aspect-ratio: 16 / 9;
+    min-height: 200px; /* fallback for browsers without aspect-ratio */
+    background: #222;  /* fallback background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #eventPhotosCarousel .carousel-item img {
-    height: 800px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 0.5rem;
+    max-height: 60vh; /* never taller than 60% of viewport */
 }
