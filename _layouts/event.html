@@ -38,9 +38,9 @@ layout: default
 {%endfor%}
 {%endif%}
 
-<h2>Speaker bios</h2>
 {% assign speakers = speakers | uniq %}
 {%if speakers %}
+<h2>Speaker bios</h2>
 {%for speaker in speakers %}
         <h3>{{speaker.name}}</h3>
         <p>{{speaker.bio | markdownify}}</p>
