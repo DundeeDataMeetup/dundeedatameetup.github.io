@@ -8,6 +8,10 @@ layout: default
 <p>{{page.attendance}} attendees</p>
 {%endif%}
 
+{% if page.cover_image %}
+<img src="{{page.cover_image}}" class="img-fluid" alt="{{page.title}}" />
+{% endif %}
+
 {%if page.description %}
 <h2>Description</h2>
 <p>{{page.description}}</p>
@@ -55,3 +59,35 @@ layout: default
 {%endfor%}
 </ul>
 {%endif%}
+
+{% assign event_year = page.date | date: "%Y" %}
+{% assign event_month = page.date | date: "%m" %}
+{% assign event_path_prefix = '/assets/img/events/' | append: event_year | append: '-' | append: event_month | append: '/' %}
+{% assign event_images = site.static_files | where_exp: "file", "file.path contains event_path_prefix" %}
+{% if event_images.size > 0 %}
+<h2>Event Photos</h2>
+<div id="eventPhotosCarousel" class="carousel slide mb-4" data-bs-ride="true">
+    <div class="carousel-inner">
+        {% for image in event_images %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <a href="{{ image.path | relative_url }}" target="_blank">
+                    <img src="{{ image.path | relative_url }}" class="d-block w-100 rounded" alt="Event photo" loading="lazy" />
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#eventPhotosCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#eventPhotosCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    <div class="carousel-indicators">
+        {% for image in event_images %}
+            <button type="button" data-bs-target="#eventPhotosCarousel" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %} aria-current="true" aria-label="Slide {{ forloop.index }}"></button>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

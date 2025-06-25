@@ -13,3 +13,9 @@
     height: 15rem;
     object-fit: cover;
 }
+
+#eventPhotosCarousel .carousel-item img {
+    height: 800px;
+    object-fit: cover;
+    object-position: center;
+}

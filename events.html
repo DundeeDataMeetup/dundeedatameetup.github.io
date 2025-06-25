@@ -21,7 +21,11 @@ description: Past and present Dundee Data Meetup events
                 </a>
             </div>
             <div class="col-auto d-none d-lg-block">
-                <img src="/assets/img/defaults/audience.jpg" class="event-img" />
+                {% if event.cover_image %}
+                <img src="{{event.cover_image}}" class="event-img" alt="{{event.title}}" />
+                {% else %}
+                <img src="/assets/img/defaults/audience.jpg" class="event-img" alt="{{event.title}}" />                
+                {% endif %}
             </div>
         </div>
     </div>
