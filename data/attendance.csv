@@ -1,0 +1,5 @@
+---
+layout: null
+---
+date,attendee_count{% for event in site.events %}
+{{event.date | date: "%Y-%m-%d"}},{{event.attendance}}{% endfor %}
