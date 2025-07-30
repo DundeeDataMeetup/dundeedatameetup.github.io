@@ -14,7 +14,7 @@ layout: default
 
 {%if page.description %}
 <h2>Description</h2>
-<p>{{page.description}}</p>
+<p>{{page.description | markdownify}}</p>
 {%endif%}
 
 {%if page.topics %}
