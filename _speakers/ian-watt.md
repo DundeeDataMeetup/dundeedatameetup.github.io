@@ -1,0 +1,5 @@
+---
+name: Ian Watt
+tagline: "Co-founder and trustee at Code The City"
+bio: "Ian is an active champion of Open Data, having led Aberdeen City Council to be the first Scottish Local Authority to publish any open data. Ian won two national UK awards in 2013: SOCITM Member of the year and the UK Local Government Category of 2013’s Digital Leaders 50. Ian was one of the author’s of Scottish Government’s Open Data Strategy 2015. Ian, an active trainer for Wikimedia UK, was shortlisted in their awards in 2019 and 2020. He was shortlisted in the Open UK awards 2021. Ian was a non-exec director of Democracy Club from Nov 2017 to Sept 2022. He has written extensively about open data, including a paper, as lead author, for the David Hume Institute. He co-founded Code The City in 2014 and has run their Data Meet-ups, Python User Group sessions, and hack weekends. He initiated Scottish Open Unconference and was part of the group who developed Open Data Scotland."
+---
