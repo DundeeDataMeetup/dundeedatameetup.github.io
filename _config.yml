@@ -22,7 +22,7 @@ title: Dundee Data Meetup
 description: >- # this means to ignore newlines until "baseurl:"
   Dundee Data Meetup is a vibrant community-driven event that brings together curious learners, data enthusiasts and professionals to explore the captivating world of data and its applications.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dundeedatameetup.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ddm.scot" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Exclude from processing.
