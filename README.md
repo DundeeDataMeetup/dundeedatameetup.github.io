@@ -1,4 +1,4 @@
-rvm# Dundee Data Meetup Website
+# Dundee Data Meetup Website
 
 Official website for Dundee Data Meetup
 
