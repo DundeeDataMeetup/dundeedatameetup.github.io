@@ -13,24 +13,42 @@ description: About the Dundee Data Meetup
 
 <h2>Organisers</h2>
 
-<div class="row g-4 py-2 row-cols-2 row-cols-lg-3">
-    {%for organiser in site.organisers%}
-    <div class="col">
-        <div class="headshot-wrapper d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 p-2 rounded">
-            <i class="bi bi-person-circle"></i>
+<div class="row g-4 py-2 row-cols-2 row-cols-lg-4">
+  {%for organiser in site.organisers%}
+  <div class="col text-center">
+    {% assign organiser_slug = organiser.path | split: "/" | last | split: "." | first %}
+    {% assign organiser_image = "" %}
+    {% for file in site.static_files %}
+      {% assign file_name = file.path | split: "/" | last | split: "." | first %}
+      {% if file.path contains "/assets/img/organisers/" and file_name == organiser_slug %}
+        {% assign organiser_image = file.path %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    <div class="mb-3">
+      {% if organiser_image != "" %}
+        <img src="{{ organiser_image }}" alt="{{ organiser.name }}" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover; border: 3px solid #dee2e6;">
+      {% else %}
+        <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-light text-secondary" style="width: 150px; height: 150px; font-size: 4rem;">
+          <i class="bi bi-person-circle"></i>
         </div>
-        <h3 class="fs-2 text-body-emphasis">{{organiser.name}}</h3>
+      {% endif %}
     </div>
-    {%endfor%}
+    <h3 class="fs-4 text-body-emphasis">{{organiser.name}}</h3>
+  </div>
+  {%endfor%}
 </div>
 
-<h2>Supporters</h2>
+<h2>Current supporters</h2>
 
 <div class="row row-cols-2 row-cols-lg-4 py-2">
-    {% assign sponsors = site.sponsors | sort_natural: "title" %} {% for sponsor in sponsors %}
-    <div class="col text-center">
-        <img class="img-fluid rounded border border-3 sponsor-logo" alt="{{sponsor.title}} logo" src="{{sponsor.logo_path}}" />
-        <h3>{{sponsor.title}}</h3>
-    </div>
-    {% endfor %}
+{% assign current_sponsors = site.sponsors | where_exp: "sponsor", "sponsor.past != true" | sort_natural: "title" %}
+{% include sponsor-grid.html sponsors=current_sponsors %}
+</div>
+
+<h2>Past supporters</h2>
+
+<div class="row row-cols-2 row-cols-lg-4 py-2">
+  {% assign past_sponsors = site.sponsors | where_exp: "sponsor", "sponsor.past == true" | sort_natural: "title" %}
+  {% include sponsor-grid.html sponsors=past_sponsors %}
 </div>

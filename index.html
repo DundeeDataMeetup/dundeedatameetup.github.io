@@ -29,7 +29,7 @@ title: Home
             <div class="col-6">
                 <div class="position-relative">
                     <div><i class="bi bi-linkedin"></i></div>
-                    <a href="https://www.linkedin.com/groups/12848027/" class="text-decoration-none stretched-link">LinkedIn</a>
+                    <a href="https://www.linkedin.com/company/dundee-data-meetup/" class="text-decoration-none stretched-link">LinkedIn</a>
                 </div>
             </div>
             <div class="col-6">
@@ -77,12 +77,8 @@ title: Home
             <div class="container-fluid py-3">
                 <h2 class="mb-3">Supporters</h2>
                 <div class="row row-cols-2 row-cols-lg-3">
-                    {% assign sponsors = site.sponsors | sort_natural: "title" %} {% for sponsor in sponsors %}
-                    <div class="col text-center">
-                        <img class="img-fluid rounded border border-3 sponsor-logo" alt="{{sponsor.title}} logo" src="{{sponsor.logo_path}}" />
-                        <h3>{{sponsor.title}}</h3>
-                    </div>
-                    {% endfor %}
+                    {% assign current_sponsors = site.sponsors | where_exp: "sponsor", "sponsor.past != true" | sort_natural: "title" %}
+                    {% include sponsor-grid.html sponsors=current_sponsors %}
                 </div>
             </div>
         </div>
