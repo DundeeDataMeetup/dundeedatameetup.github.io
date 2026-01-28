@@ -76,3 +76,8 @@ defaults:
     values:
       layout: "default"
 
+plugins:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
