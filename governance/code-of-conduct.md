@@ -1,6 +1,7 @@
 ---
 title: Code of Conduct
 description: Code of Conduct for the Dundee Data Meetup
+redirect_from: /code-of-conduct
 ---
 
 <h1>{{page.title}}</h1>
@@ -15,7 +16,18 @@ description: Code of Conduct for the Dundee Data Meetup
     <li>Be mindful that online communications can be misinterpreted; choose your words carefully and assume positive intent from others.</li>
 </ul>
 
-<h2>2. Professional and Respectful Communication</h2>
+<h2>2. Photography and Media</h2>
+<ul>
+    <li>Attendees should ask permission before taking photos of other attendees or organisers.</li>
+    <li>Organisers will always ask permission before taking photos.</li>
+    <li>Photos taken at events may be used for promotional purposes (e.g., our website, social media, and future event materials).</li>
+    <li>Respect "no photo" requests; if someone declines, do not photograph or record them.</li>
+    <li>Organisers will announce if event photography is taking place and provide an opt-out mechanism.</li>
+    <li>Do not photograph sensitive information on slides or content explicitly marked as confidential.</li>
+    <li>If you wish to have a photo removed from our channels, contact <a href="mailto:dundeedatameetup@gmail.com">dundeedatameetup@gmail.com</a>.</li>
+</ul>
+
+<h2>3. Professional and Respectful Communication</h2>
 <ul>
     <li>Maintain a professional and courteous demeanour in all interactions, whether in-person or online.</li>
     <li>Use appropriate language and avoid profanity, offensive jokes, or inappropriate content.</li>
@@ -23,7 +35,7 @@ description: Code of Conduct for the Dundee Data Meetup
     <li>Respect others' time by avoiding excessive posting, spamming, or derailing conversations.</li>
 </ul>
 
-<h2>3. Collaboration and Knowledge Sharing</h2>
+<h2>4. Collaboration and Knowledge Sharing</h2>
 <ul>
     <li>Encourage constructive and meaningful discussions, promoting the sharing of knowledge, insights, and experiences.</li>
     <li>Engage in open-minded conversations, embracing different perspectives and fostering a culture of learning and growth.</li>
@@ -31,7 +43,7 @@ description: Code of Conduct for the Dundee Data Meetup
     <li>When sharing resources or links in online communities, ensure they are relevant and appropriate for the discussion.</li>
 </ul>
 
-<h2>4. Online Community Guidelines</h2>
+<h2>5. Online Community Guidelines</h2>
 <ul>
     <li>Use your real name or a professional handle that identifies you to the community.</li>
     <li>Do not share personal contact information of other members without their explicit consent.</li>
@@ -40,14 +52,14 @@ description: Code of Conduct for the Dundee Data Meetup
     <li>Respect channel purposes and community guidelines specific to each online platform.</li>
 </ul>
 
-<h2>5. Compliance with Policies</h2>
+<h2>6. Compliance with Policies</h2>
 <ul>
     <li>Adhere to all applicable laws, regulations, and policies related to data privacy and security.</li>
     <li>Respect the intellectual property rights of others and avoid unauthorized use or distribution of copyrighted materials.</li>
     <li>Do not share confidential or proprietary information from your workplace or other organizations.</li>
 </ul>
 
-<h2>6. Reporting and Enforcement</h2>
+<h2>7. Reporting and Enforcement</h2>
 <ul>
     <li>Report any violations of the Code of Conduct to the event organizers or contact us directly at <a href="mailto:dundeedatameetup@gmail.com" >dundeedatameetup@gmail.com</a>.</li>
     <li>All reports will be handled confidentially and investigated promptly.</li>
