@@ -55,19 +55,30 @@ All attendees are expected to follow the Meetup’s [Code of Conduct](/governanc
 
 The Meetup does not require formal officer roles, though responsibilities may be shared or delegated as needed.
 
-## 7. Finance
+## 7. Management meetings
+The organisers shall meet regularly to oversee the affairs of the group.
+
+These meetings will include discussion and decisions on:
+
+- Delivery of the group’s activities and future planning
+- Financial position, income and expenditure, and financial controls
+- Relationships with sponsors, partners, and venue providers
+
+The organisers may communicate between meetings by electronic or other means to manage day-to-day matters and maintain ongoing engagement with sponsors and venue providers.
+
+## 8. Finance
 
 - Dundee Data Meetup operates on a not-for-profit basis
 - Any income or funding received will be used solely to support the aims and activities of the Meetup
 - Funds may be used for venue hire, accessibility requirements, refreshments, speaker costs, or other reasonable expenses
 - No funds or assets shall be distributed for personal profit
 
-## 8. Amendments
+## 9. Amendments
 
 - This constitution may be amended by agreement of the organisers
 - Where practical, significant changes will be communicated publicly
 
-## 9. Dissolution
+## 10. Dissolution
 
 - In the event that Dundee Data Meetup is dissolved, any remaining funds or assets shall be transferred to a not-for-profit organisation or community group with similar aims
 - No assets shall be distributed to individuals
