@@ -3,6 +3,17 @@ title: Speakers
 description: Past and present Dundee Data Meetup speakers
 ---
 
-<h1>Speakers</h1>
+<h1>{{page.title}}</h1>
 
-<p>Coming soon</p>
+{% assign speakers = site.speakers | sort_natural: "name" %}
+
+<div class="row g-4 py-2 row-cols-2 row-cols-lg-4">
+  {% for speaker in speakers %}
+  <div class="col text-center">
+    <a href="{{ speaker.url }}" class="text-decoration-none text-body">
+      <h2 class="fs-4 text-body-emphasis">{{ speaker.name }}</h2>
+      {% if speaker.tagline %}<p class="text-body-secondary">{{ speaker.tagline }}</p>{% endif %}
+    </a>
+  </div>
+  {% endfor %}
+</div>
