@@ -1,0 +1,55 @@
+---
+title: Sponsorship
+description: Information about sponsoring Dundee Data Meetup
+---
+
+<h1>{{page.title}}</h1>
+
+<p>Dundee Data Meetup is a community-driven initiative that relies on the support of sponsors to continue providing valuable content and networking opportunities for data professionals in Dundee. By sponsoring our meetup, you can help us create a vibrant and inclusive environment for data enthusiasts to learn, share, and connect.</p>
+
+<p>We offer various sponsorship packages that can be tailored to meet your needs and goals. As a sponsor, you will have the opportunity to showcase your brand, engage with our community, and contribute to the growth of the data ecosystem in Dundee.</p>
+
+<p>Your sponsorship will help us cover the costs of the following:</p>
+<ul>
+  <li>Food and beverages for our attendees</li>
+  <li>Stickers and other promotional materials</li>
+</ul>
+
+{% assign sponsorship_packages = site.data.sponsorship_packages %}
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 py-2">
+  {% for package in sponsorship_packages %}
+  <div class="col mb-4">
+    <div class="card h-100">
+      <div class="card-body flex-grow-0">
+        <h5 class="card-title"><i class="bi bi-star-fill" style="color: {{ package.iconColour }}"></i> {{ package.name }}</h5>
+        <p class="card-text">{{ package.tagline }}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        {% for benefit in package.benefits %}
+        <li class="list-group-item">{{ benefit }}</li>
+        {% endfor %}
+      </ul>
+      <div class="card-body pt-3 mt-auto">
+        <a href="mailto:dundeedatameetup@gmail.com?subject=Inquiry%20about%20{{ package.name }}%20Sponsorship" class="btn btn-primary w-100">Express Interest</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<p>Not sure which package is right for you? Feel free to reach out to us at <a href="mailto:dundeedatameetup@gmail.com?subject=General%20Inquiry%20about%20Sponsorship">dundeedatameetup@gmail.com</a> and we will be happy to discuss your options.</p>
+
+<h2>Governance</h2>
+
+<p>Dundee Data Meetup is an non-profit community initiative, and we are committed to transparency and accountability in our operations. We have a <a href="/governance/constitution">governance structure</a> in place that includes a steering committee responsible for overseeing the strategic direction of the meetup, as well as our budget and sponsorship funds.</p>
+
+<p>Whilst we are not a registered charity, we operate with the same principles of transparency and accountability. We maintain clear records of our finances, including sponsorship funds, and we are committed to using these funds responsibly to support the growth and development of our community. Our financial reports are available upon request.</p>
+
+<h2>Current supporters</h2>
+
+<div class="row row-cols-2 row-cols-lg-4 py-2">{% assign current_sponsors = site.sponsors | where_exp: "sponsor", "sponsor.past != true" | sort_natural: "title" %} {% include sponsor-grid.html sponsors=current_sponsors %}</div>
+
+<h2>Past supporters</h2>
+
+<div class="row row-cols-2 row-cols-lg-4 py-2">{% assign past_sponsors = site.sponsors | where_exp: "sponsor", "sponsor.past == true" | sort_natural: "title" %} {% include sponsor-grid.html sponsors=past_sponsors %}</div>
