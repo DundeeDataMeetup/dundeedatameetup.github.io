@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Bronze",
+        "iconColour": "#cd7f32",
+        "tagline": "Sponsor a single event",
+        "level": 1,
+        "amount": 150,
+        "benefits": [
+            "Your logo on our website",
+            "A shoutout at the event you sponsor on the day of the event"
+        ]
+    },
+    {
+        "name": "Silver",
+        "iconColour": "#c0c0c0",
+        "tagline": "Sponsor events for a quarter",
+        "level": 2,
+        "amount": 450,
+        "benefits": [
+            "Your logo on our website",
+            "A shoutout at the events you sponsor on the day of the event",
+            "A speaker slot for one event",
+            "Promotional materials at the event you sponsor"
+        ]
+    },
+    {
+        "name": "Gold",
+        "iconColour": "#ffd700",
+        "tagline": "Sponsor events for a year",
+        "level": 3,
+        "amount": 1800,
+        "benefits": [
+            "Your logo on our website",
+            "A shoutout at the events you sponsor on the day of the event",
+            "Promotional materials at the events you sponsor",
+            "Promotional materials in the post-event follow-up email", 
+            "We will work with you to plan a whole meetup with a theme and speakers of your choice"
+        ]
+    }
+]
