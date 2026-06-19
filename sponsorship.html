@@ -24,6 +24,7 @@ description: Information about sponsoring Dundee Data Meetup
       <div class="card-body flex-grow-0">
         <h2 class="card-title fs-3"><i class="bi bi-star-fill" style="color: {{ package.iconColour }}"></i> {{ package.name }}</h2>
         <p class="card-text">{{ package.tagline }}</p>
+        <p class="fs-4 fw-semibold mb-0">&pound;{{ package.amount }}</p>
       </div>
       <ul class="list-group list-group-flush">
         {% for benefit in package.benefits %}
