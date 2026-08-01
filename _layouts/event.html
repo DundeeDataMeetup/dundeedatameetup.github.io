@@ -64,7 +64,8 @@ layout: default
 {% assign event_month = page.date | date: "%m" %}
 {% assign event_path_prefix = '/assets/img/events/' | append: event_year | append: '-' | append: event_month | append: '/' %}
 {% assign event_images = site.static_files | where_exp: "file", "file.path contains event_path_prefix" %}
-{% if event_images.size > 0 %}
+{% comment %} We don't want a gallery if there's only one image as it's probably the cover image {% endcomment %}
+{% if event_images.size > 1 %}
 <h2>Event Photos</h2>
 <!-- Modal structure -->
 <div class="modal fade" id="eventPhotoModal" tabindex="-1" aria-labelledby="eventPhotoModalLabel" aria-hidden="true">
