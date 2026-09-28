@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{% if page.description == "" or page.description == nil or page.description == blank %}{{site.description}}{% else %}{{page.description | slice: 0,160}}{% endif %}">
 
-<meta property="og:image" content="{{ "/assets/img/ddm_logo.png" | prepend: site.url }}" />
+<meta name="image" property="og:image" content="{{ "/assets/img/ddm_logo.png" | prepend: site.url }}" />
 
 <title>{{page.title}} | {{site.title}}</title>
 
