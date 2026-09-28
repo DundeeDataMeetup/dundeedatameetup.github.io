@@ -26,8 +26,22 @@
     {
         "name": "Gold",
         "iconColour": "#ffd700",
-        "tagline": "Sponsor events for a year",
+        "tagline": "Sponsor events for half a year",
         "level": 3,
+        "amount": 900,
+        "benefits": [
+            "Your logo on our website",
+            "A shoutout at the events you sponsor on the day of the event",
+            "A speaker slot for two events",
+            "Promotional materials at the event you sponsor",
+            "Promotional materials in the post-event follow-up email"
+        ]
+    },
+    {
+        "name": "Platinum",
+        "iconColour": "#E6E6FA",
+        "tagline": "Sponsor events for a year",
+        "level": 4,
         "amount": 1800,
         "benefits": [
             "Your logo on our website",
