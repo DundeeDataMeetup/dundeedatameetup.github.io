@@ -1,0 +1,41 @@
+---
+title: Donate
+description: Information about donating to Dundee Data Meetup
+---
+
+<h1>{{page.title}}</h1>
+
+<p>Dundee Data Meetup is a community-driven initiative that relies on the support of sponsors to continue providing valuable content and networking opportunities for data professionals in Dundee. By sponsoring our meetup, you can help us create a vibrant and inclusive environment for data enthusiasts to learn, share, and connect.</p>
+
+<p>If you would like to support Dundee Data Meetup, you can make a donation to help us cover the costs of organizing events, providing catering, and maintaining our community resources.</p>
+
+<p>We use GoCardless to securely process all donations. When you choose a donation option below, you will be redirected to their platform to complete your contribution.</p>
+
+<h2>One-off Donations</h2>
+
+<p class="lead" >You can make a one-off donation by choosing from one of the options below:</p>
+{% assign one_off_packages = site.data.donation_packages.one_off %}
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+  {% for package in one_off_packages %}
+    <div class="col">
+      {% include donation-card.html package=package type="one_off" %}
+    </div>
+  {% endfor %}
+  <div class="col">
+    {% include donation-card.html type="one_off" amount="Custom amount" hide_currency=true description="Prefer to choose your own one-off amount? Get in touch and we can arrange this for you." link="mailto:dundeedatameetup@gmail.com?subject=Custom%20one-off%20donation%20inquiry" button_label="Contact us" %}
+  </div>
+</div>
+
+<h2>Recurring Donations</h2>
+<p class="lead">You can support Dundee Data Meetup on an ongoing basis by setting up a recurring donation from one of the available options below:</p>
+{% assign recurring_packages = site.data.donation_packages.recurring %}
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  {% for package in recurring_packages %}
+    <div class="col">
+      {% include donation-card.html package=package type="recurring" %}
+    </div>
+  {% endfor %}
+  <div class="col">
+    {% include donation-card.html type="recurring" amount="Custom amount" hide_currency=true description="Want to set a custom monthly contribution? Send us an email and we will help you set it up." link="mailto:dundeedatameetup@gmail.com?subject=Custom%20recurring%20donation%20inquiry" button_label="Contact us" %}
+  </div>
+</div>

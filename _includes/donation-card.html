@@ -1,0 +1,32 @@
+{% assign package = include.package %}
+{% assign contribution_type = include.type | default : "one_off" %}
+{% assign amount_value = include.amount | default: package.amount %}
+{% assign description_value = include.description | default: package.description %}
+{% assign link_value = include.link | default: package.link %}
+{% assign button_label = include.button_label | default : "Contribute" %}
+{% assign hide_currency = include.hide_currency | default: false %}
+{% assign is_recurring = false %}
+{% if contribution_type == "recurring" %}
+    {% assign is_recurring = true %}
+{% endif %}
+
+<article class="card h-100 border-0 shadow-sm overflow-hidden">
+    <div class="card-header bg-primary bg-gradient text-white border-0 py-3">
+        <span class="badge text-bg-light text-uppercase small">{{ contribution_type | replace: "_", " " }}
+            contribution</span>
+    </div>
+    <div class="card-body d-flex flex-column">
+        <h3 class="card-title h4 mb-2">
+            {% if hide_currency %}{{ amount_value }}
+            {% else %}{{ amount_value | prepend: "&pound;" }}
+            {% endif %}
+            {% if is_recurring %}
+                <span class="fs-6 text-body-secondary fw-normal">
+                    / month</span>{% endif %}
+        </h3>
+        <p class="card-text text-body-secondary">{{ description_value }}</p>
+        <div class="mt-auto pt-3">
+            <a href="{{ link_value }}" class="btn btn-primary rounded-pill w-100" {% unless link_value contains "mailto:" %} target="_blank" rel="noopener noreferrer" {% endunless %}>{{ button_label }}</a>
+        </div>
+    </div>
+</article>

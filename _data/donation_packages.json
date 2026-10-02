@@ -1,0 +1,46 @@
+{
+    "one_off": [
+        {
+            "amount": 5,
+            "description": "Support us with a one-off donation of £5",
+            "link": "https://example.com/TODO"
+        },
+        {
+            "amount": 10,
+            "description": "Support us with a one-off donation of £10",
+            "link": "https://example.com/TODO"
+        },
+        {
+            "amount": 15,
+            "description": "Support us with a one-off donation of £15",
+            "link": "https://example.com/TODO"
+        },
+        {
+            "amount": 20,
+            "description": "Support us with a one-off donation of £20",
+            "link": "https://example.com/TODO"
+        }
+    ],
+    "recurring": [
+        {
+            "amount": 5,
+            "description": "Support us with a recurring donation of £5 per month",
+            "link": "https://example.com/TODO"
+        },
+        {
+            "amount": 10,
+            "description": "Support us with a recurring donation of £10 per month",
+            "link": "https://example.com/TODO"
+        },
+        {
+            "amount": 15,
+            "description": "Support us with a recurring donation of £15 per month",
+            "link": "https://example.com/TODO"
+        },
+        {
+            "amount": 20,
+            "description": "Support us with a recurring donation of £20 per month",
+            "link": "https://example.com/TODO"
+        }
+    ]
+}
