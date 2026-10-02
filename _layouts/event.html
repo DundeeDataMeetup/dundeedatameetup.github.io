@@ -55,7 +55,17 @@ layout: default
 <h2>Slides</h2>
 <ul>
 {%for slide in page.slides %}
-    <li><a href="{{slide.url | prepend: site.url}}" download target="_blank">{{slide.title}}</a></li>
+    {% assign slide_url = slide.url %}
+    {% if slide.external != true %}
+        {% assign slide_url = slide.url | prepend: site.url %}
+    {% endif %}
+
+    {% assign slide_download = "download" %}
+    {% if slide.no_download == true %}
+        {% assign slide_download = "" %}
+    {% endif %}
+
+    <li><a href="{{ slide_url }}" {{ slide_download }} target="_blank">{{slide.title}}</a></li>
 {%endfor%}
 </ul>
 {%endif%}
