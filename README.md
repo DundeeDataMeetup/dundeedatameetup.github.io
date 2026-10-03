@@ -33,7 +33,7 @@ This website is built with:
 │   ├── css/                 # Stylesheets
 │   ├── img/                 # Images
 │   ├── js/                  # JavaScript files
-│   └── slides/              # Event presentation slides
+│   └── slides/              # Event presentation slides. NB: Files over 25MB are now stored in the DDM Google Drive.
 ├── data/                    # Data files
 │   └── attendance.csv       # Event attendance records
 ├── index.html               # Homepage
@@ -93,6 +93,10 @@ slides:
       title: Slide Title
 ---
 ```
+
+> ![NOTE]
+> Files over 25MB should be stored in the DDM Google Drive instead of the repository.
+> This is to enable test branches to deploy to Cloudflare Pages without exceeding repository size limits.
 
 ### Adding a New Speaker
 
