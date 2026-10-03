@@ -94,8 +94,8 @@ slides:
 ---
 ```
 
-> ![NOTE]
-> Files over 25MB should be stored in the DDM Google Drive instead of the repository.
+> [!NOTE]
+> Files over 25MB should be stored in the DDM Google Drive instead of the repository. 
 > This is to enable test branches to deploy to Cloudflare Pages without exceeding repository size limits.
 
 ### Adding a New Speaker
