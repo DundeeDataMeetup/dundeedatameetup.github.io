@@ -6,24 +6,27 @@
 <!doctype html>
 <html lang="en" class="h-100">
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{% if page.description == "" or page.description == nil or page.description == blank %}{{site.description}}{% else %}{{page.description | slice: 0,160}}{% endif %}">
+<head>
 
-{% assign title = page.title | append: " | " | append: site.title %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% if page.description == "" or page.description == nil or page.description == blank %}{{site.description}}{% else %}{{page.description | slice: 0,160}}{% endif %}">
 
-<meta name="og:title" content="{{ title }}">
-<meta name="og:type" content="website">
-<meta name="og:image" content="{{ "/assets/img/social_share.png" | prepend: site.url }}">
+    {% assign title = page.title | append: " | " | append: site.title %}
 
-<title>{{ title }}</title>
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ "/assets/img/social_share.png" | prepend: site.url }}">
+    <meta property="og:description" content="{% if page.description == "" or page.description == nil or page.description == blank %}{{site.description}}{% else %}{{page.description | slice: 0,160}}{% endif %}">
 
-<link rel="icon" type="image/png" href="/favicon.png" />
+    <title>{{ title }}</title>
 
-<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="/assets/css/bootstrap-icons.min.css" rel="stylesheet">
-<link href="{{ "assets/css/site.css" | relative_url | append: cacheBust }}" rel="stylesheet">
-<script src="https://js.tito.io/v2" async></script>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="{{ "assets/css/site.css" | relative_url | append: cacheBust }}" rel="stylesheet">
+    <script src="https://js.tito.io/v2" async></script>
 
 </head>
 
