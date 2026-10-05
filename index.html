@@ -43,8 +43,25 @@ title: Home
 </div>
 
 <div class="row mb-4">
+    <div class="col-12">
+        <div class="p-3 bg-body-tertiary rounded-3">
+            <div class="container-fluid py-3">
+                <h2 class="mb-3">Sponsors</h2>
+                <div class="row row-cols-2 row-cols-lg-3">
+                    {% assign current_sponsors = site.sponsors | where_exp: "sponsor", "sponsor.past != true" | sort_natural: "title" %}
+                    {% include sponsor-grid.html sponsors=current_sponsors %}
+                </div>
+                <hr>
+                <a href="/sponsorship" class="btn btn-lg btn-secondary">Become a sponsor</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row mb-4">
     <div class="col-md-6 col-12">
-        <div class="p-3 mb-4 bg-body-tertiary rounded-3">
+        <div class="p-3 bg-body-tertiary rounded-3">
             <div class="container-fluid py-3">
                 <h2>Past events</h2>
                 <p>Check out a list of our past events</p>
@@ -53,7 +70,7 @@ title: Home
         </div>
     </div>
     <div class="col-md-6 col-12">
-        <div class="p-3 mb-4 bg-body-tertiary rounded-3">
+        <div class="p-3 bg-body-tertiary rounded-3">
             <div class="container-fluid py-3">
                 <h2>Speakers</h2>
                 <p>See who's presented previously at our meetups</p>
@@ -70,18 +87,4 @@ title: Home
         <a class="btn btn-secondary" href="/speak">Submit a talk</a>
     </div>
     
-</div>
-
-<div class="row mb-4">
-    <div class="col-12">
-        <div class="p-3 mb-4 bg-body-tertiary rounded-3">
-            <div class="container-fluid py-3">
-                <h2 class="mb-3">Supporters</h2>
-                <div class="row row-cols-2 row-cols-lg-3">
-                    {% assign current_sponsors = site.sponsors | where_exp: "sponsor", "sponsor.past != true" | sort_natural: "title" %}
-                    {% include sponsor-grid.html sponsors=current_sponsors %}
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
