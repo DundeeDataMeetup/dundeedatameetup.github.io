@@ -3,44 +3,44 @@
         {
             "amount": 5,
             "description": "Support us with a one-off donation of £5",
-            "link": "https://example.com/TODO"
+            "link": "https://pay.gocardless.com/BRT01M3TJZC166WXVK14KQ7JGSW70"
         },
         {
             "amount": 10,
             "description": "Support us with a one-off donation of £10",
-            "link": "https://example.com/TODO"
+            "link": "https://pay.gocardless.com/BRT01M46FS260PVP3CKGSAXQ78TZZ"
         },
         {
             "amount": 15,
             "description": "Support us with a one-off donation of £15",
-            "link": "https://example.com/TODO"
+            "link": "https://pay.gocardless.com/BRT01M46G0D17THPQB9SJAPZMGBTQ"
         },
         {
             "amount": 20,
             "description": "Support us with a one-off donation of £20",
-            "link": "https://example.com/TODO"
+            "link": "https://pay.gocardless.com/BRT01M46G14RMJC3SA6BQZEY0NMHC"
         }
     ],
     "recurring": [
         {
             "amount": 5,
             "description": "Support us with a recurring donation of £5 per month",
-            "link": "https://example.com/TODO"
+            "link": "https://pay.gocardless.com/BRT01M46GB48SV45VMGNPRRECJ1EY"
         },
         {
             "amount": 10,
             "description": "Support us with a recurring donation of £10 per month",
-            "link": "https://example.com/TODO"
+            "link": "https://pay.gocardless.com/BRT01M46GBT9WWJQMBJWRAHKBEHV4"
         },
         {
             "amount": 15,
             "description": "Support us with a recurring donation of £15 per month",
-            "link": "https://example.com/TODO"
+            "link": "https://pay.gocardless.com/BRT01M46GDFTZP4MZKTPFR08EP5K0"
         },
         {
             "amount": 20,
             "description": "Support us with a recurring donation of £20 per month",
-            "link": "https://example.com/TODO"
+            "link": "https://pay.gocardless.com/BRT01M46GE8ZPZQ7CQF1NHQ67NEWM"
         }
     ]
 }
