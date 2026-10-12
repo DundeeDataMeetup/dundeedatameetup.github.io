@@ -5,6 +5,25 @@ description: Privacy Policy for the Dundee Data Meetup
 
 # {{page.title}}
 
+<div class="accordion mb-1" id="changelog-accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="changelog-accordion-heading">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#changelog-content" aria-expanded="false" aria-controls="changelog-content">
+        Change log
+      </button>
+    </h2>
+    <div id="changelog-content" class="accordion-collapse collapse" aria-labelledby="changelog-accordion-heading" data-bs-parent="#changelog-accordion">
+      <div class="accordion-body">
+        <ul>
+            <li>2026-01-30 - Initial creation of the Privacy Policy</li>
+            <li>2026-10-12 - Addition of change log and updates to third-party information sharing</li>
+        </ul>
+        <p>A more detailed version of these changes can be found in <a href="https://github.com/DundeeDataMeetup/dundeedatameetup.github.io/commits/main/governance/privacy-policy.md" target="_blank" >this website's source code</a> on GitHub.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## 1. Introduction
 
 Dundee Data Meetup is committed to protecting your privacy and handling your personal data responsibly.
@@ -50,6 +69,8 @@ We use personal data to:
 
 We only use personal data where we have a lawful basis to do so.
 
+We may share your event registration information (e.g. name and email) with our venue provider if requested for event management purposes.
+
 ## 6. Lawful Basis for Processing
 
 Under UK GDPR, our lawful bases for processing personal data are:
@@ -59,17 +80,33 @@ Under UK GDPR, our lawful bases for processing personal data are:
 
 ## 7. Third-Party Services
 
-We use trusted third-party services to help us run Dundee Data Meetup:
+We use trusted third-party services to help us run Dundee Data Meetup. We do not sell or share personal data with third parties for marketing purposes.
 
-### Tito
+### Cloudflare
 
-We use [Tito](https://ti.to/) for event ticketing and attendee communications. When you register for an event, your personal data is processed by Tito in accordance with their own privacy policies.
+We use [Cloudflare](https://www.cloudflare.com/) to protect our website and improve its performance, as well as a small amount of computing resources for aggregate analytics. Personal data processed by Cloudflare is handled in accordance with their privacy policies.
+
+
+### GitHub
+
+We use [GitHub](https://github.com/) to manage our code repositories, process aggregate data, and collaborate on event organisation. Personal data stored in GitHub is accessed only by Meetup organisers and is used solely for organising Dundee Data Meetup activities.
+
+You can view the source code for the tools we use to manage Dundee Data Meetup on our [GitHub organisation](https://github.com/DundeeDataMeetup).
+
+
+### GoCardless
+
+We use [GoCardless](https://gocardless.com/) for processing payments related to event ticketing. Personal data processed by GoCardless is handled in accordance with their privacy policies. We do not have access to banking information or payment details beyond amounts paid to us and who made the payment. Your information is not shared with GoCardless unless you initiate a payment through their platform.
+
 
 ### Google Workspace
 
 We use [Google Drive and Gmail](https://workspace.google.com/) to store event-related information and communicate with attendees. Personal data stored in these systems is accessed only by Meetup organisers and is used solely for organising Dundee Data Meetup activities.
 
-We do not sell or share personal data with third parties for marketing purposes.
+### Tito
+
+We use [Tito](https://ti.to/) for event ticketing and attendee communications. When you register for an event, your personal data is processed by Tito in accordance with their own privacy policies.
+
 
 ## 8. Data Storage and Security
 
@@ -104,7 +141,7 @@ If you have concerns about how your personal data is handled, you have the right
 
 ## 12. Changes to This Policy
 
-This Privacy Policy may be updated from time to time. Any significant changes will be communicated publicly where practical.
+This Privacy Policy may be updated from time to time. Any significant changes will be communicated publicly where practical and are logged at the start of this policy.
 
 ## 13. Contact
 
